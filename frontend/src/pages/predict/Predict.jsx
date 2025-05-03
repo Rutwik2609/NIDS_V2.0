@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/";
 
 const PredictPage = () => {
   const navigate = useNavigate();
@@ -56,7 +56,7 @@ const PredictPage = () => {
       };
 
       const response = await axios.post(
-        `${API_URL}/api/v1/predict`,
+        `${API_URL}api/v1/predict/result`,
         payload,
         { withCredentials: true }
       );

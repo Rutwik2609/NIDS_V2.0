@@ -3,10 +3,12 @@ import axios from 'axios';
 import { useState } from 'react';
 import Typewriter from 'react-typewriter-effect';
 import { useNavigate } from 'react-router-dom';
+import { useQueryClient } from '@tanstack/react-query';
 
 const Home = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
+  const queryClient = useQueryClient();
 
   const handlePredict = () => {
     navigate('/predict');
@@ -27,6 +29,7 @@ const Home = () => {
         {},
         { withCredentials: true }
       );
+      queryClient.invalidateQueries(['authUser']);
       navigate('/login');
     } catch (error) {
       setError(error.response?.data?.message || "Logout failed");
