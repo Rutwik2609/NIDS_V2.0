@@ -7,7 +7,7 @@ const Results = () => {
 
   useEffect(() => {
     // Fetch data from backend
-    axios.get("http://localhost:5000/api/v1/result/view-result") // Change URL based on your backend
+    axios.get("/api/v1/result/view-result") // Change URL based on your backend
       .then((response) => {
         setAttackData(response.data); // Store data in state
       })
