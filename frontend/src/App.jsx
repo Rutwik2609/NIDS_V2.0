@@ -18,7 +18,7 @@ const App = () => {
     queryKey: ["authUser"],
     queryFn: async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/v1/auth/me", {
+        const { data } = await axios.get("/api/v1/auth/me", {
           withCredentials: true,
         });
         if (data.error) return null;
