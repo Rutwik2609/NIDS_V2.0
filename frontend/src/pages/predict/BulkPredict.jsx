@@ -3,8 +3,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-
 const BulkPredict = () => {
     const navigate = useNavigate();
     const [file, setFile] = useState(null);
@@ -39,7 +37,7 @@ const BulkPredict = () => {
 
         try {
             const response = await axios.post(
-                `${API_URL}/api/v1/predict/bulk`,
+                `/api/v1/predict/bulk`,
                 formData,
                 {
                     headers: {
