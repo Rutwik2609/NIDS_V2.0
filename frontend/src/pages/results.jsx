@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const AttackRecords = () => {
+const Results = () => {
   const [attackData, setAttackData] = useState([]);
 
   useEffect(() => {
@@ -63,4 +63,4 @@ const AttackRecords = () => {
   );
 };
 
-export default AttackRecords;
+export default Results;

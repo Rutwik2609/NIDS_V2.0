@@ -5,7 +5,7 @@ import "./App.css";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/";
 
-const PredictPage = () => {
+const Predict = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     attack: 0,
@@ -306,4 +306,4 @@ const PredictPage = () => {
   );
 };
 
-export default PredictPage;
+export default Predict;

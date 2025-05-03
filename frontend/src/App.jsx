@@ -8,7 +8,7 @@ import Home from "./pages/Home.jsx";
 import Login from "./pages/auth/Login.jsx";
 import Register from "./pages/auth/Register.jsx";
 import Predict from "./pages/predict/Predict.jsx";
-import BulkPredict from "./pages/predict/bulkPredict.jsx";
+import BulkPredict from "./pages/predict/BulkPredictPage";
 import Abouts from "./pages/abouts.jsx";
 import Results from "./pages/results.jsx";
 import NotFound from "./pages/NotFound.jsx";
