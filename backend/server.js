@@ -26,9 +26,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// Handle root route
+app.get('/', (req, res) => {
+  res.send('Service is running 🚀');
+});
+
+// Handle favicon requests
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end();
+});
+
 app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/predict", predictRoutes);
 app.use("/api/v1/result", resulttRoutes);
+
+
 
 app.listen(PORT, () => {
   connectDB();
