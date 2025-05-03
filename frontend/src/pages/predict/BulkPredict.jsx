@@ -5,7 +5,7 @@ import "./App.css";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
-const BulkPredictPage = () => {
+const BulkPredict = () => {
     const navigate = useNavigate();
     const [file, setFile] = useState(null);
     const [predictions, setPredictions] = useState([]);
@@ -226,4 +226,4 @@ const BulkPredictPage = () => {
     );
 };
 
-export default BulkPredictPage; 
+export default BulkPredict; 
